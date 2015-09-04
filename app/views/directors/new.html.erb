@@ -1,2 +1,13 @@
-<h1>Directors#new</h1>
-<p>Find me in app/views/directors/new.html.erb</p>
+<h1>Add a New Director</h1>
+<%= form_for @director do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :awards %>
+  <%= f.text_field :awards %>
+
+  <%= f.label :douchey %>
+  <%= f.select :douchey, options_for_select([['True', true],['false', false]])%>
+
+  <%= f.submit %>
+<% end %>

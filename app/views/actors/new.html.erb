@@ -1,2 +1,16 @@
-<h1>Actors#new</h1>
-<p>Find me in app/views/actors/new.html.erb</p>
+<h1>Add an Actor</h1>
+<%= form_for @actor do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+
+  <%= f.label 'Willing to get naked?' %>
+  <%= f.select :will_do_nude_scenes, options_for_select([['Definitely', true],['Not at all', false]])%>
+
+  <%= f.label :movie_id %>
+  <%= f.collection_select(:movie_id, Movie.all, :id, :name) %>
+
+  <%= f.submit %>
+<% end %>

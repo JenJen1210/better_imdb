@@ -1,4 +1,5 @@
 <h1>Movies</h1>
+<%= link_to 'Add a Movie', new_movie_path %>
 <% @movies.each do |m| %>
   <h3><%= m.name %></h3>
   <h3><%= m.year_released %></h3>

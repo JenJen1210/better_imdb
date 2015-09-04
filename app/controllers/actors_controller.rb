@@ -10,4 +10,20 @@ class ActorsController < ApplicationController
   def show
     @actor = Actor.find(params[:id])
   end
+
+  def create
+    @actor = Actor.new(actor_params)
+
+    if @actor.save
+      redirect_to actors_path
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def actor_params
+    params.require(:actor).permit(:name, :age, :will_do_nude_scenes, :movie_id)
+  end
 end
