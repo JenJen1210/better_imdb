@@ -1,5 +1,5 @@
-<h1>Actor</h1>
-<h2><%= @actor.name %></h2>
+<h1>About <%= @actor.name %>...</h1>
+<h2>Name: <%= @actor.name %></h2>
 <h4>Age: <%= @actor.age %></h4>
 <h4>Will Get Naked?: <%= boolean_to_text(@actor.will_do_nude_scenes) %></h4>
 <%= link_to 'Back', actors_path %>

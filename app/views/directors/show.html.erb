@@ -1,2 +1,5 @@
-<h1>Directors#show</h1>
-<p>Find me in app/views/directors/show.html.erb</p>
+<h1>About <%= @director.name %>...</h1>
+<h2>Name: <%= @director.name %></h2>
+<h4>Awards: <%= @director.awards %></h4>
+<h4>Douchey much?: <%= boolean_to_text(@director.douchey) %></h4>
+<%= link_to 'Back', directors_path %>

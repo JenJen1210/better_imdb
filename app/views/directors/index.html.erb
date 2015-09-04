@@ -2,7 +2,6 @@
 <% @directors.each do |d| %>
   <h3><%= d.name %></h3>
   <h3><%= d.awards %></h3>
-  <h3><%= d.douchey %></h3>
 
   <%= link_to 'Details', director_path(d) %>
 <% end %>
