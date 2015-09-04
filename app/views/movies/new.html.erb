@@ -10,8 +10,7 @@
   <%= f.collection_select(:director_id, Director.all, :id, :name) %>
 
   <%= f.label :rated %>
-  <%= f.select :rated, options_for_select([['G', 'G'],['PG', 'PG'],['PG-13', 'PG-13'],['R', 'R'],['Director\'s Cut', 'Director\'s Cut']])%>
-
+  <%= f.select_tag(:rated, options_for_select([['G', 1], ['PG', 2],['PG-13', 3],['R', 4],['Director\'s Cut', 5]], 1) %>
   <%= f.label 'Sloppy Potatoes Rating(1-5 Spuds)' %>
   <%= f.text_field :sloppy_potatoes_rating %>
 

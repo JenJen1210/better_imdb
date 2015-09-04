@@ -15,6 +15,16 @@ class ActorsController < ApplicationController
     @actor = Actor.find(params[:id])
   end
 
+  def update
+    @actor = Actor.find(params[:id])
+
+    if @actor.update(actor_params)
+      redirect_to actors_path
+    else
+      render :edit
+    end
+  end
+
   def create
     @actor = Actor.new(actor_params)
 
@@ -26,7 +36,7 @@ class ActorsController < ApplicationController
   end
 
   def destroy
-    @actor = Movie.find(params[:id])
+    @actor = Actor.find(params[:id])
     @actor.destroy
     redirect_to actors_path
   end
