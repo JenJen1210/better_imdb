@@ -1,0 +1,19 @@
+<h1>Edit <%= @movie.name %></h1>
+<%= form_for @movie do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label 'Released' %>
+  <%= f.text_field :year_released %>
+
+  <%= f.label :director_id %>
+  <%= f.collection_select(:director_id, Director.all, :id, :name) %>
+
+  <%= f.label :rated %>
+  <%= f.select :rated, options_for_select([['G', 'G'],['PG', 'PG'],['PG-13', 'PG-13'],['R', 'R'],['Director\'s Cut', 'Director\'s Cut']])%>
+
+  <%= f.label 'Sloppy Potatoes Rating(1-5 Spuds)' %>
+  <%= f.text_field :sloppy_potatoes_rating %>
+
+  <%= f.submit %>
+<% end %>

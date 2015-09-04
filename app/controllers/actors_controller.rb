@@ -11,6 +11,10 @@ class ActorsController < ApplicationController
     @actor = Actor.find(params[:id])
   end
 
+  def edit
+    @actor = Actor.find(params[:id])
+  end
+
   def create
     @actor = Actor.new(actor_params)
 
@@ -19,6 +23,12 @@ class ActorsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @actor = Movie.find(params[:id])
+    @actor.destroy
+    redirect_to actors_path
   end
 
   private

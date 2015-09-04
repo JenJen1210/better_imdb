@@ -2,4 +2,6 @@
 <h2>Name: <%= @actor.name %></h2>
 <h4>Age: <%= @actor.age %></h4>
 <h4>Will Get Naked?: <%= boolean_to_text(@actor.will_do_nude_scenes) %></h4>
-<%= link_to 'Back', actors_path %>
+<%= link_to 'Back', actors_path %> |
+<%= link_to 'Edit', edit_actor_path(@actor) %> |
+<%= link_to 'Delete', @actor, method: :delete %>

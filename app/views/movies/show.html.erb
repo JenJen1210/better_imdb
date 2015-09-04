@@ -4,5 +4,7 @@
 <h4>Released: <%= @movie.year_released %></h4>
 <h4>Director: <%= @movie.director.name %></h4>
 <h4>Rated: <%= @movie.rated %></h4>
-<div>Sloppy Potatoes Rating(1-5 spuds): <%= render_spuds(@movie.sloppy_potatoes_rating) %></div>
-<%= link_to 'Back', movies_path %>
+  <div class="potato"><p>Sloppy Potatoes Rating: </p><%= render_spuds(@movie.sloppy_potatoes_rating)%></div>
+<%= link_to 'Back', movies_path %> |
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Delete', @movie, method: :delete %>

@@ -13,6 +13,10 @@ class DirectorsController < ApplicationController
     @director = Director.find(params[:id])
   end
 
+  def edit
+    @director = Director.find(params[:id])
+  end
+
   def create
     @director = Director.new(director_params)
 
@@ -21,6 +25,12 @@ class DirectorsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @director = Movie.find(params[:id])
+    @director.destroy
+    redirect_to directors_path
   end
 
   private

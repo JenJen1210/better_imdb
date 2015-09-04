@@ -2,4 +2,6 @@
 <h2>Name: <%= @director.name %></h2>
 <h4>Awards: <%= @director.awards %></h4>
 <h4>Douchey much?: <%= boolean_to_text(@director.douchey) %></h4>
-<%= link_to 'Back', directors_path %>
+<%= link_to 'Back', directors_path %> |
+<%= link_to 'Edit', edit_director_path(@director) %> | 
+<%= link_to 'Delete', @director, method: :delete %>

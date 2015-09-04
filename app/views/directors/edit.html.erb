@@ -1,0 +1,13 @@
+<h1>Edit <%= @director.name %></h1>
+<%= form_for @director do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :awards %>
+  <%= f.text_field :awards %>
+
+  <%= f.label :douchey %>
+  <%= f.select :douchey, options_for_select([['True', true],['false', false]])%>
+
+  <%= f.submit %>
+<% end %>
