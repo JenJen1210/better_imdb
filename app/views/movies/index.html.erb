@@ -1,8 +1,12 @@
+
+
 <h1>Movies</h1>
 <%= link_to 'Add a Movie', new_movie_path %>
 <% @movies.each do |m| %>
-  <h3><%= m.name %></h3>
+  <h2><%= m.name -%></h2>
+  <div class="potato"><h3>Sloppy Potatoes Rating: </h3><%= render_spuds(m.sloppy_potatoes_rating)%></div>
   <h3><%= m.year_released %></h3>
+
 
   <%= link_to 'Details', movie_path(m) %>
 <% end %>

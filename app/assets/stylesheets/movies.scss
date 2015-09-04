@@ -1,3 +1,10 @@
 // Place all the styles related to the Movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.potato img {
+  width: auto;
+  height: 30px;
+}
+.potato h3 {
+  display: inline-block;
+}
